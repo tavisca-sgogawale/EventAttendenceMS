@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EventAttendenceMS.Attendees
+namespace EventAttendenceMS.Events
 {
-    public class AttendeeBuilder
+    public enum EventType
     {
+        Online,
+        Offline,
+        GeoLocation
     }
 }

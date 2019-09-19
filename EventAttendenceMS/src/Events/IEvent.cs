@@ -1,10 +1,10 @@
-﻿using EventAttendenceMS.src.Attendees;
+﻿using EventAttendenceMS.Attendees;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EventAttendenceMS.src.Events
+namespace EventAttendenceMS.Events
 {
     public interface IEvent
     {
@@ -12,5 +12,7 @@ namespace EventAttendenceMS.src.Events
         string Name { get; set; }
         List<IAttendee> AttendeeList { get; set; } 
         TimeSlot TimeSlot { get; set; }
+        EventType EventType { get; set; }
+        bool TryCreateEvent(Dictionary<string, string> keyValuePairs, out IEvent e);
     }
 }

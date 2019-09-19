@@ -2,10 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EventAttendenceMS.Attendees;
 
-namespace EventAttendenceMS.src.Events
+namespace EventAttendenceMS.Events
 {
-    public class OfflineEvent
+    public class OfflineEvent : IEvent
     {
+        public Guid Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public List<IAttendee> AttendeeList { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public TimeSlot TimeSlot { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public bool TryCreateEvent(Dictionary<string, string> keyValuePairs, out IEvent e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
